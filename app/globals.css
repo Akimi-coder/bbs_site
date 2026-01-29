@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-tektur: var(--font-tektur);
+  --font-dela: var(--font-dela);
+  --color-lime: #B5F000;
+  --breakpoint-3xl: 200rem;
+}
+
+.bg-custom-size {
+  background-size: 75% 50%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +31,72 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.paused-animation {
+  animation-play-state: paused;
+}
+
+@theme {
+  --animate-infinite-scroll: infinite-scroll 80000ms linear infinite;
+  @keyframes infinite-scroll {
+  0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+}
+
+@theme {
+  --animate-infinite-scrollv2: infinite-scrollv2 80000ms linear infinite;
+  @keyframes infinite-scrollv2 {
+  0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+}
+
+@theme {
+  --animate-infinite-scrollv3: infinite-scrollv2 8000ms linear infinite;
+  @keyframes infinite-scrollv3 {
+  0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+}
+
+
+.swiper-slide-active .waycard {
+  box-shadow: 0 0 4vw 0.5vw rgba(181, 240, 0, 0.6);
+}
+
+.swiper-slide-active .waycard h2 {
+  color: #b5f000;
+}
+
+@keyframes check {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-check {
+  animation: check 0.6s ease-out;
 }
