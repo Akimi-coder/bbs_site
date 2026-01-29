@@ -37,3 +37,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 =======
 
+To build this project and push to your hosting you must 
+
+```bash
+npm run build 
+```
+than your out is in /out folder
+
+
